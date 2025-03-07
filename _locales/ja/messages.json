@@ -3,12 +3,12 @@
 		"message": "NetEaseMusicWorld++"
 	},
 	"description": {
-		"message": "Enhanced NetEase Music Access Solution"
+		"message": "NetEase Musicの海外制限を解除"
 	},
 	"disabled": {
-		"message": "Disabled"
+		"message": "無効"
 	},
 	"enabled": {
-		"message": "Enabled"
+		"message": "有効"
 	}
 }

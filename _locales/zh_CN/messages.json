@@ -1,17 +1,14 @@
 {
-    "name": {
-        "message": "NetEaseMusicWorld+"
-    },
-    "description": {
-        "message": "解锁网易云音乐的海外播放"
-    },
-    "closed": {
-        "message": "关闭"
-    },
-    "normal": {
-        "message": "普通"
-    },
-    "enhanced": {
-        "message": "增强"
-    }
+	"name": {
+		"message": "NetEaseMusicWorld++"
+	},
+	"description": {
+		"message": "解锁网易云音乐的海外播放（新版）"
+	},
+	"disabled": {
+		"message": "已禁用"
+	},
+	"enabled": {
+		"message": "已启用"
+	}
 }
