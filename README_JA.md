@@ -4,6 +4,10 @@
 
 > NetEase Musicの海外アクセス制限を解除するChrome拡張機能（新バージョン）
 
+## 拡張機能のURL
+
+[Chrome ウェブストア](https://chromewebstore.google.com/detail/neteasemusicworld++/ibglohpjgdhkmhmfpdibjgmjjmccafmh)
+
 ## 概要
 
 これは海外ユーザーがNetEase MusicにアクセスできるようにするChrome拡張機能です。本プロジェクトは、前の2つのバージョンをベースに、Chromeの最新の拡張機能要件に合わせて最適化されています。

@@ -1,6 +1,6 @@
 const MODES = {
 	DISABLED: 0,
-	ENABLED: 1, // 只保留一种启用状态
+	ENABLED: 1, // Only one mode for enabling/disabling
 }
 
 const RULE_IDS = {
@@ -59,21 +59,21 @@ const getRules = () => [
 	},
 ]
 
-// 更新规则状态
+// Update rules based on mode
 async function updateRules(mode) {
 	try {
-		// 获取所有规则
+		// Get all current rules
 		const rules = await chrome.declarativeNetRequest.getDynamicRules()
 		console.log('Current rules:', rules)
 		const ruleIds = rules.map((rule) => rule.id)
 
-		// 移除现有规则
+		// Remove existing rules
 		await chrome.declarativeNetRequest.updateDynamicRules({
 			removeRuleIds: ruleIds,
 		})
 		console.log('Rules removed')
 
-		// 根据模式添加新规则
+		// Add new rules if enabled
 		if (mode === MODES.ENABLED) {
 			await chrome.declarativeNetRequest.updateDynamicRules({
 				addRules: getRules(),
@@ -81,7 +81,7 @@ async function updateRules(mode) {
 			console.log('New rules added:', getRules())
 		}
 
-		// 验证规则是否成功添加
+		// Verify rules update
 		const updatedRules = await chrome.declarativeNetRequest.getDynamicRules()
 		console.log('Updated rules:', updatedRules)
 	} catch (error) {
@@ -89,7 +89,7 @@ async function updateRules(mode) {
 	}
 }
 
-// 更新UI
+// Update UI based on mode
 async function updateUI(mode) {
 	const icons = {
 		[MODES.DISABLED]: {
@@ -114,19 +114,19 @@ async function updateUI(mode) {
 	await chrome.action.setTitle({ title })
 }
 
-// 同步状态
+// Sync extension state
 async function syncState(mode) {
 	await Promise.all([chrome.storage.local.set({ mode }), updateUI(mode), updateRules(mode)])
 }
 
-// 监听图标点击
+// Listen for icon click
 chrome.action.onClicked.addListener(async () => {
 	const { mode = MODES.ENABLED } = await chrome.storage.local.get('mode')
 	const newMode = mode === MODES.ENABLED ? MODES.DISABLED : MODES.ENABLED
 	await syncState(newMode)
 })
 
-// 初始化
+// Initialize extension
 chrome.runtime.onInstalled.addListener(async () => {
 	const { mode } = await chrome.storage.local.get('mode')
 	const initialMode = mode ?? MODES.ENABLED

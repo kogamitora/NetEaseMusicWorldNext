@@ -4,11 +4,17 @@
 
 > 解锁网易云音乐网页版海外访问限制的 Chrome 扩展程序（新版）
 
+## 插件地址
+
+[Chrome 网上应用商店](https://chromewebstore.google.com/detail/neteasemusicworld++/ibglohpjgdhkmhmfpdibjgmjjmccafmh)
+
 ## 简介
 
 这是一个帮助海外用户访问网易云音乐的 Chrome 扩展程序。本项目是在前两个版本的基础上，针对 Chrome 最新版本的扩展要求进行了优化。
 
 由于原作者不再维护，且本人在海外经常需要使用网易云音乐，因此对这个扩展进行了更新，方便更多海外用户使用。
+
+
 
 
 ## 历史版本

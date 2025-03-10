@@ -4,6 +4,10 @@
 
 > Chrome extension for unlocking overseas access to NetEase Music (New Version)
 
+## Extension URL
+
+[Chrome Web Store](https://chromewebstore.google.com/detail/neteasemusicworld++/ibglohpjgdhkmhmfpdibjgmjjmccafmh)
+
 ## Introduction
 
 This is a Chrome extension that helps overseas users access NetEase Music. This project is an optimization based on the previous two versions, updated to meet Chrome's latest extension requirements.
