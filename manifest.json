@@ -28,9 +28,9 @@
 	},
 	"action": {
 		"default_icon": {
-			"16": "images/grey16.png",
-			"48": "images/grey48.png",
-			"128": "images/grey128.png"
+			"16": "images/red16.png",
+			"48": "images/red48.png",
+			"128": "images/red128.png"
 		}
 	},
 	"icons": {

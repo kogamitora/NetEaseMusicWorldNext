@@ -132,3 +132,9 @@ chrome.runtime.onInstalled.addListener(async () => {
 	const initialMode = mode ?? MODES.ENABLED
 	await syncState(initialMode)
 })
+
+chrome.runtime.onStartup.addListener(async () => {
+	const { mode } = await chrome.storage.local.get('mode')
+	const initialMode = mode ?? MODES.ENABLED
+	await syncState(initialMode)
+})
